@@ -1,11 +1,9 @@
-const { componentA } = require('./components/componentA')
-const { componentB } = require('./components/componentB')
+import { vote } from './pages/vote'
 
-function renderTemplate(alias, data) {
-    return `
-        ${componentA()}
-        ${componentB()}
-    `
+export function renderTemplate(alias, data) {
+    if (alias === 'leaders') {
+        return vote(data)
+    } else {
+        return 'wrong alias param.'
+    }
 }
-
-exports.renderTemplate = renderTemplate
