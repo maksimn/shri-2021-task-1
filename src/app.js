@@ -2,9 +2,9 @@ const express = require('express')
 
 const PORT = 8080
 const app = express()
-const buildFolder = __dirname + '/../build/'
+const rootFolder = __dirname + '/../'
 
-app.use(express.static(buildFolder))
+app.use(express.static(rootFolder))
 
 app.get('', (req, res) => {
     res.send(`
@@ -14,11 +14,11 @@ app.get('', (req, res) => {
             <meta charSet="utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <title>CodeHub</title>
-            <link rel="stylesheet" href="stories.css">
+            <link rel="stylesheet" href="build/stories.css">
         </head>
         
         <body>
-            <script type="text/javascript" src="stories.js"></script>
+            <script type="text/javascript" src="build/stories.js"></script>
         </body>
         
         </html>
