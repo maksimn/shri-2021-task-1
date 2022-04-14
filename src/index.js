@@ -2,7 +2,9 @@ import { renderTemplate } from './renderTemplate'
 
 const body = document.querySelector('body')
 
-body.innerHTML = renderTemplate('leaders', {
+window.renderTemplate = renderTemplate
+
+body.innerHTML = window.renderTemplate('leaders', {
     'title': 'Больше всего коммитов',
     'subtitle': 'Спринт № 213',
     'emoji': '👑',

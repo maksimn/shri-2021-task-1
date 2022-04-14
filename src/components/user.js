@@ -10,7 +10,7 @@ export function user(data, emoji) {
             </div>
             <div class="user__value">
                 ${data.valueText}
-            <div>
+            </div>
         </div>
     `
 }
